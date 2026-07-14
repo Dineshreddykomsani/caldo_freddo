@@ -1,6 +1,7 @@
 from pathlib import Path
 
 from decouple import Csv, config
+import dj_database_url
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -68,17 +69,23 @@ TEMPLATES = [
 WSGI_APPLICATION = "config.wsgi.application"
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": config("DB_NAME"),
-        "USER": config("DB_USER"),
-        "PASSWORD": config("DB_PASSWORD"),
-        "HOST": config("DB_HOST", default="localhost"),
-        "PORT": config("DB_PORT", default="5432"),
-        "CONN_MAX_AGE": config("DB_CONN_MAX_AGE", default=60, cast=int),
-        "OPTIONS": {},
-    }
+    "default": dj_database_url.config(
+        default=config("DATABASE_URL")
+    )
 }
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": config("DB_NAME"),
+#         "USER": config("DB_USER"),
+#         "PASSWORD": config("DB_PASSWORD"),
+#         "HOST": config("DB_HOST", default="localhost"),
+#         "PORT": config("DB_PORT", default="5432"),
+#         "CONN_MAX_AGE": config("DB_CONN_MAX_AGE", default=60, cast=int),
+#         "OPTIONS": {},
+#     }
+# }
 
 AUTH_PASSWORD_VALIDATORS = [
     {
