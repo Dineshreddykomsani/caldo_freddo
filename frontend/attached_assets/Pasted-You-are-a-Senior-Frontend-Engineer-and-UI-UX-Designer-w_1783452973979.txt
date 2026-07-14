@@ -1,0 +1,176 @@
+You are a Senior Frontend Engineer and UI/UX Designer working on an existing enterprise website built with React, TypeScript, Vite, Tailwind CSS and Framer Motion.
+
+The website is already complete and approved.
+
+Your task is NOT to redesign the website.
+
+Your task is to refine, optimize and polish the existing implementation based on the review comments below.
+
+========================================================
+
+IMPORTANT RULES
+
+DO NOT redesign any section.
+
+DO NOT change branding.
+
+DO NOT change business content.
+
+DO NOT replace images or videos unless required for presentation improvements.
+
+DO NOT remove sections.
+
+DO NOT change navigation.
+
+DO NOT change functionality.
+
+DO NOT change the overall visual identity.
+
+Only improve the requested areas while preserving the current design language.
+
+========================================================
+
+TASKS
+
+1. RESPONSIVENESS
+
+The website should provide an excellent experience on every device.
+
+Carefully review every page and every component.
+
+Optimize layouts for:
+
+• Mobile phones
+• Tablets
+• Laptops
+• Desktop
+• Large desktop monitors
+
+Ensure:
+
+• No horizontal scrolling
+• No content overflow
+• Proper image scaling
+• Proper video scaling
+• Responsive typography
+• Responsive spacing
+• Responsive cards
+• Responsive buttons
+• Responsive navigation
+• Proper section alignment
+• Consistent container widths
+
+Do not simply shrink desktop layouts.
+
+Each breakpoint should feel properly designed.
+
+========================================================
+
+2. REMOVE EM DASHES
+
+Search the entire project.
+
+Remove every em dash (—).
+
+Rewrite sentences naturally.
+
+Use commas, bullets or normal punctuation instead.
+
+No em dashes should remain anywhere in the project.
+
+========================================================
+
+3. BUTTON CONSISTENCY
+
+Review every button.
+
+Standardize:
+
+• Height
+• Padding
+• Border radius
+• Font size
+• Icon spacing
+• Hover effects
+• Focus states
+• Transition timing
+
+Buttons should look consistent across the entire website.
+
+Buttons should remain responsive on every screen size.
+
+========================================================
+
+4. SLIDER IMPROVEMENTS
+
+Improve the UI of every slider/carousel.
+
+Keep the same content.
+
+Improve only the presentation.
+
+Review:
+
+• Navigation arrows
+• Active indicator
+• Card spacing
+• Slide spacing
+• Hover effects
+• Transition animation
+• Touch swipe experience
+• Desktop interaction
+
+The slider should feel smooth and premium while maintaining the existing functionality.
+
+========================================================
+
+5. VIDEO PRESENTATION
+
+Improve the presentation of the video section.
+
+Do not change the business content.
+
+Research inspiration from premium industrial and engineering websites such as:
+
+• UltraTecno
+• Daikin
+• Carrier
+• Bosch
+• Schneider Electric
+• Siemens
+
+Use them ONLY for presentation ideas.
+
+Do NOT copy their design.
+
+Improve:
+
+• Video container
+• Video framing
+• Section layout
+• Visual hierarchy
+• CTA placement
+• Background treatment
+• Spacing
+• Responsive behaviour
+
+The video should feel integrated into the overall design rather than simply embedded.
+
+========================================================
+
+6. QUALITY CHECK
+
+After implementing all changes, review the website again.
+
+Ensure:
+
+• Better responsiveness on every device
+• No em dashes anywhere
+• Consistent button sizing
+• Improved slider UI
+• Improved video presentation
+• No broken layouts
+• No spacing issues
+• No functionality changes
+
+The final result should look like a polished version of the existing website, not a redesigned one.

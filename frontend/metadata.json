@@ -1,0 +1,8 @@
+{
+  "name": "Caldo Freddo",
+  "description": "Premium industrial cleaning and polymer bumper barrier protection solutions in the UAE. Official distributor of UltraTecno ultrasonic cleaning technologies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
