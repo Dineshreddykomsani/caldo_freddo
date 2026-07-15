@@ -7,8 +7,14 @@ from .serializers import QuoteRequestSerializer
 
 
 class SendLeadEmailsTests(SimpleTestCase):
-    @patch("apps.leads.emails.queue_lead_email_delivery.delay")
-    def test_send_lead_emails_queues_background_delivery(self, queue_mock):
+    @patch("apps.leads.emails.settings")
+    @patch("apps.leads.emails.resend.Emails.send")
+    def test_send_lead_emails_sends_customer_and_owner_emails(self, send_mock, settings_mock):
+        settings_mock.RESEND_API_KEY = "re_test"
+        settings_mock.RESEND_FROM_EMAIL = "onboarding@resend.dev"
+        settings_mock.DEFAULT_FROM_EMAIL = "Caldo Freddo <hello@example.com>"
+        settings_mock.OWNER_EMAIL = "owner@example.com"
+
         send_lead_emails(
             form_type="Callback Request",
             owner_subject="New Callback Request",
@@ -17,13 +23,10 @@ class SendLeadEmailsTests(SimpleTestCase):
             fields={"full_name": "Customer"},
         )
 
-        queue_mock.assert_called_once_with(
-            form_type="Callback Request",
-            owner_subject="New Callback Request",
-            customer_email="customer@example.com",
-            customer_name="Customer",
-            fields={"full_name": "Customer"},
-        )
+        self.assertEqual(send_mock.call_count, 2)
+        self.assertEqual(send_mock.call_args_list[0].args[0]["from"], "onboarding@resend.dev")
+        self.assertEqual(send_mock.call_args_list[0].args[0]["to"], ["customer@example.com"])
+        self.assertEqual(send_mock.call_args_list[1].args[0]["to"], ["owner@example.com"])
 
 
 class QuoteRequestSerializerTests(SimpleTestCase):

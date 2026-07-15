@@ -112,19 +112,16 @@ Invoke-RestMethod `
 
 ## Email
 
-Lead notification emails use Django's SMTP backend. Configure these in `backend/.env`:
+Lead notification emails use the Resend API. Configure these in `backend/.env`:
 
 ```env
-EMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-EMAIL_HOST_USER=your-gmail-address@gmail.com
-EMAIL_HOST_PASSWORD=your-gmail-app-password
-DEFAULT_FROM_EMAIL=your-gmail-address@gmail.com
+RESEND_API_KEY=
+RESEND_FROM_EMAIL=onboarding@resend.dev
+DEFAULT_FROM_EMAIL=
 OWNER_EMAIL=owner@example.com
 ```
 
-Lead submissions are saved before email is attempted. If SMTP fails, the error is logged and the API still returns success because the enquiry has already been recorded.
+Lead submissions are saved before email is attempted. If Resend fails, the API returns an error and logs the delivery failure.
 
 ## Production Notes
 
