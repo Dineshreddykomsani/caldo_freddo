@@ -1,10 +1,12 @@
 import { Industry, Product, Service } from './types';
 
-const DEFAULT_API_BASE_URL = 'http://127.0.0.1:8000/api';
+const DEFAULT_API_BASE_URL = 'https://caldo-freddo-1.onrender.com/api';
 
 export const API_BASE_URL = (
   import.meta.env.VITE_API_BASE_URL || DEFAULT_API_BASE_URL
 ).replace(/\/+$/, '');
+console.log("ENV =", import.meta.env.VITE_API_BASE_URL);
+console.log("API_BASE_URL =", API_BASE_URL);
 
 type ApiEnvelope<T> = {
   success: boolean;
